@@ -11,12 +11,14 @@ h1{
     height: 5rem;
     line-height: 5rem;
 }
+
+
 .choices{
    
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 3rem;
+   gap: 4rem;
    margin-top: 5rem;
 
 }
@@ -67,3 +69,52 @@ img{
     padding: 1rem;
     border-radius: 1rem;
 }
+.computerchoices{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 5rem;
+
+}
+
+.Compchoice{
+    height: 110px;
+   width: 110px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+
+#Usertitle{
+    background-color: #081b31;
+    color: #fff;
+    font-size: 1.2rem;
+
+  
+}
+
+#Computertitle{
+    background-color: #081b31;
+    color: #fff;
+    font-size: 1.2rem;
+
+
+  
+}
+
+
+
+
+/* added */
+
+
+.highlight {
+    background-color: #081b31; /* Highlight color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional glowing effect */
+}
+

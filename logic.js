@@ -2,6 +2,7 @@ let userScore=0;
 let compScore=0;
 
 const choices=document.querySelectorAll(".choice");
+const computerchoices=document.querySelectorAll(".computerchoices");
 const msg=document.querySelector("#msg");
 const userScorePara=document.querySelector("#user-score");
 const compScorePara=document.querySelector("#comp-score");
@@ -12,7 +13,7 @@ const showWinner=(userWin,userChoice,compChoice)=>{
     if(userWin){
         userScore++;
         userScorePara.innerText=userScore;
-        msg.innerText=`You Win! your ${userChoice} beats ${compChoice}`;
+        msg.innerText=`You Win! your ${userChoice} beats computer's ${compChoice}`;
         msg.style.backgroundColor="green";
 
 
@@ -21,7 +22,7 @@ const showWinner=(userWin,userChoice,compChoice)=>{
     else{
         compScore++;
         compScorePara.innerText=compScore;
-        msg.innerText=`You lose!  ${compChoice} beats your ${userChoice} `;
+        msg.innerText=`You lose! computer's  ${compChoice} beats your ${userChoice} `;
         msg.style.backgroundColor="red";
 
 
@@ -41,11 +42,25 @@ const genCompChoice=()=>{
     return options[ranIdx];
 }
 
+
+
+
+
+
+
+
+
+
 const playGame=(userChoice)=>{
     console.log("userChoice=",userChoice);
     //generate computer choices
     const compChoice=genCompChoice();
     console.log("compChoice=",compChoice);
+
+
+
+    //added 
+    highlightCompChoice(compChoice);
 
     if(userChoice===compChoice)
     {
@@ -68,12 +83,6 @@ const playGame=(userChoice)=>{
         }
         showWinner(userWin,userChoice,compChoice);
     }
-
-
-
-
-
-
 }
 
 choices.forEach((choice)=>{
@@ -84,3 +93,19 @@ choices.forEach((choice)=>{
 
     })
 })
+
+
+
+
+//added
+const highlightCompChoice = (compChoice) => {
+    // Remove any existing highlights
+    document.querySelectorAll('.Compchoice').forEach(item => item.classList.remove('highlight'));
+
+    // Add highlight to the selected computer choice
+    const selectedCompChoice = document.getElementById("C" + compChoice); // E.g., Cscissor, Cpaper, Crock
+    if (selectedCompChoice) {
+        selectedCompChoice.classList.add('highlight');
+    }
+};
+
