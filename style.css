@@ -1,4 +1,4 @@
-*{
+ *{
     margin: 0px;
     padding: 0px;
     text-align: center;
@@ -115,14 +115,27 @@ img{
   
 }
 
-
-
-
-/* added */
-
-
 .highlight {
     background-color: #081b31; /* Highlight color */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional glowing effect */
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional glowing effect*/
+} 
+
+@media (min-width:300px) and (max-width:400px) {
+
+    #msg{
+        background-color: #081b31;
+        color: #fff;
+        font-size: 20px;
+        display: inline;
+        padding: 0;
+        border-radius: 1rem;
+    }
 }
 
+    
+ 
+    @media (max-width: 768px) {
+        .images-container {
+          flex-direction: column;
+        }
+      }
