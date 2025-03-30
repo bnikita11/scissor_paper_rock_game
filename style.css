@@ -130,12 +130,50 @@ img{
         padding: 0;
         border-radius: 1rem;
     }
+    h1{
+        background-color: #081b31;
+        color: #fff;
+        height: 5rem;
+        line-height: 5rem;
+    }
+    
+        .choices{
+   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            margin-top: 5rem;
+    }
+    .computerchoices{
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        margin-top: 5rem;
+    
+    }
+    #Computertitle{
+        background-color: #081b31;
+        color: #fff;
+        font-size: 3%;
+        width: 100px;
+    
+
+    
+
+}
+
+#Usertitle{
+    background-color: #081b31;
+    color: #fff;
+    font-size: 3%;
+    width: 100px;
+
+  
 }
 
     
  
-    @media (max-width: 768px) {
-        .images-container {
-          flex-direction: column;
-        }
-      }
+    
